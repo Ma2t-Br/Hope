@@ -41,3 +41,20 @@ INSERT INTO HOPE (Titre, Domaine, Lien) VALUES ('Material for mkdocs', 'Généra
 INSERT INTO HOPE (Titre, Domaine, Lien) VALUES ('Looping', 'Bases de données', 'https://www.looping-mcd.fr/');
 INSERT INTO HOPE (Titre, Domaine, Lien) VALUES ('MongoDB Compass', 'Bases de données', 'https://www.mongodb.com/products/tools/compass');
 INSERT INTO HOPE (Titre, Domaine, Lien) VALUES ('Wireshark', 'Réseaux', 'https://www.wireshark.org/');
+
+-- Création de la table User
+CREATE TABLE User (
+                      id BIGINT AUTO_INCREMENT PRIMARY KEY,
+                      username VARCHAR(255) NOT NULL,
+                      firstName VARCHAR(255) NOT NULL,
+                      lastName VARCHAR(255) NOT NULL,
+                      role VARCHAR(50) NOT NULL,
+                      password VARCHAR(255) NOT NULL
+);
+
+-- Insertion d'exemples d'utilisateurs
+INSERT INTO User (username, firstName, lastName, role, password)
+VALUES
+    ('admin_user', 'John', 'Doe', 'Administrateur', 'password123'),
+    ('teacher_user', 'Alice', 'Smith', 'Enseignant', 'teacherpass'),
+    ('student_user', 'Bob', 'Brown', 'Etudiant', 'studentpass');
